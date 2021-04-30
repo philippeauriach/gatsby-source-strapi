@@ -38,6 +38,15 @@ plugins: [
           name: `collection-name`,
           api: { qs: { _locale: 'en' } }
         },
+        // if you want to make a loop, to load all the data without crashing your server or hitting a time limit 
+        // useful when fetching lots of data 
+        // it will perform multiple call, asking for 100 items each time, 
+        // and stopping when a request sends less than the asked limit, or if _queryLimit is attained
+        {
+          name: `collection-name`,
+          api: { qs: { _sort: 'drop_date:DESC' } }, 
+          loop: 100,
+        },
       ],
       //If using single types place them in this array.
       singleTypes: [`home-page`, `contact`],
