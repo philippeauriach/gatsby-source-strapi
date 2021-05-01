@@ -15,7 +15,7 @@
     }
   ],
   "directories": {
-    "lib": "./src"
+    "lib": "./lib"
   },
   "repository": {
     "type": "git",
