@@ -13,6 +13,8 @@ exports.sourceNodes = async (
     singleTypes = [],
     loginData = {},
     queryLimit = 100,
+    loop,
+    params,
   }
 ) => {
   const { createNode, deleteNode, touchNode } = actions
@@ -31,7 +33,9 @@ exports.sourceNodes = async (
       contentType,
       jwtToken,
       queryLimit,
-      reporter
+      reporter,
+      loop,
+      params,
     })
   )
 
@@ -42,7 +46,9 @@ exports.sourceNodes = async (
       singleType,
       jwtToken,
       queryLimit,
-      reporter
+      reporter,
+      loop,
+      params,
     })
   )
 
